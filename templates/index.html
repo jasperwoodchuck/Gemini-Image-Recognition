@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image-Recognition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="video-container">
+        <img src="{{ url_for('video_feed') }}" id="video">
+    </div>
+
+    <div class="master-container">
+        <div id = "caption-btn-div">
+            <button id="generate-caption-btn">Generate Caption</button>
+        </div>
+        <p id="caption-paragraph"></p>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
