@@ -5,7 +5,7 @@ from flask import Flask, render_template, Response
 import PIL.Image
 
 PROMPT = "What's in the image (in 10 words)?"
-API_KEY = os.getenv("GEMINI_API_KEY")
+API_KEY = os.getenv("GEMINI_API_KEY") #"AIzaSyCWjo7_g2buhRwF73HXNMfaW7wXlDdNR5o"
 IMAGE_PATH = "img.jpg"
 
 genai.configure(api_key=API_KEY)
@@ -14,7 +14,7 @@ APP = Flask(__name__)
 
 LAST_FRAME = None
 
-def captionImage(image_path: str = None) -> str:
+def captionImage(image_path:str = None) -> str:
     if image_path is None:
         image_path = IMAGE_PATH
 
@@ -25,7 +25,7 @@ def captionImage(image_path: str = None) -> str:
 
     return caption.text
 
-def saveAndCaptionImage(image_path: str = None, frame=None) -> str:
+def saveAndCaptionImage(image_path:str = None, frame=None) -> str:
     if frame is None:
         raise Exception("Image isn't available to caption")
 
