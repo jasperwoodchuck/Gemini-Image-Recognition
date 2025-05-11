@@ -7,16 +7,16 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <div id="video-container">
-        <img src="{{ url_for('video_feed') }}" id="video">
-    </div>
-
-    <div class="master-container">
-        <div id = "caption-btn-div">
-            <button id="generate-caption-btn">Generate Caption</button>
-        </div>
-        <p id="caption-paragraph"></p>
-    </div>
+    <img src="{{ url_for('video_feed') }}" id="video">
+    <div id="main-container">
+		<div id="caption-container">
+			<p id="caption-paragraph"></p>
+		</div>
+		<div id="prompt-container">
+			<input type="text" placeholder="Ask Anything About the Picture">
+			<button id="generate-caption-btn">Generate Caption</button>
+		</div>
+	</div>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>

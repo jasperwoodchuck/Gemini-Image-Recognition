@@ -35,8 +35,8 @@ def saveAndCaptionImage(image_path:str = None, frame=None) -> str:
 def gen_frame():
     video = cv2.VideoCapture(0)
 
-    video.set(cv2.CAP_PROP_FRAME_HEIGHT, 1000)
-    video.set(cv2.CAP_PROP_FRAME_WIDTH, 2000)
+    video.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
+    video.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
     
 
     while True:

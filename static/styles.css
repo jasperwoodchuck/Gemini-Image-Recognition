@@ -1,34 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+	--border-radius: 10px;
+	--primary-color: rgba(1, 1, 1, 0.8);
+}
+
 * {
-    margin: 0;
+	user-select: none;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: "Public Sans", sans-serif;
+	font-size: 16px;
+	font-weight: 600;
 }
 
-.master-container {
-    display: flex;
-}
-
-#video-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+	background-color: var(--primary-color);
 }
 
 #video {
-    padding: 10px;
-    width: 80%;
-    height: 80%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	object-fit: cover;
+	z-index: -1;
 }
 
-#caption-btn-div {
-    flex: 1;
+#main-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
 }
 
-#caption-paragraph {
-    flex: 3;
-    text-align: center;
-    line-height: 100px;
+#caption-container {
+	position: relative;
+	top: 80vh;
 }
 
-p {
-    font-family: Arial, Helvetica, sans-serif;
-    height: 10hv;
+#caption-container p {
+	color: white;
+	font-family: "Public Sans", sans-serif;
+	font-size: 24px;
+	font-weight: 600;
+}
+
+#prompt-container {
+	background-color: white;
+	border-radius: var(--border-radius);
+	position: relative;
+	top: 82vh;
+	
+}
+
+#prompt-container input {
+	background-color: transparent;
+	width: max(30vw, 400px);
+	margin-left: 20px;
+	outline: none;
+}
+
+#prompt-container input::placeholder {
+	color: rgba(1, 1, 1, 0.2);
+	opacity: 1;
+
+}
+
+#prompt-container button {
+	background-color: var(--primary-color);
+	color: white;
+	height: 40px;
+	padding: 10px;
+	margin: 5px;
+	border-radius: calc(var(--border-radius)/1.5)
 }
